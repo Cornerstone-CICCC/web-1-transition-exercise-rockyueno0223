@@ -1,0 +1,57 @@
+.circle {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  cursor: pointer;
+  position: absolute;
+  animation-name: moving;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.circle:hover {
+  opacity: 0;
+}
+
+@keyframes moving {
+  0%, 100% {
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+  }
+  25% {
+    top: 0;
+    left: calc(100vw - 100px);
+    border-radius: 0%;
+  }
+  50% {
+    top: calc(100vw - 100px);
+    left: calc(100vw - 100px);
+    border-radius: 50%;
+  }
+  75% {
+    top: calc(100vw - 100px);
+    left: 0;
+    border-radius: 0%;
+  }
+}
+.loading-bar {
+  margin: 200px auto;
+  width: 280px;
+  height: 60px;
+  background-color: grey;
+}
+
+.loading {
+  height: 100%;
+  background-color: green;
+  animation: loading 5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */
